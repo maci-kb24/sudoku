@@ -5,118 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    .sudoku-board {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-      grid-template-rows: repeat(9, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      max-width: 26rem;
-    }
-    .cell {
-      width: 45px;
-      height: 45px;
-      border: 1px solid #000;
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
-      font-size: 24px;
-    }
-  </style>
   <body>
-    <div id="app">
-      <h1>Sudoku game</h1>
-      <div class="sudoku-board">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        
+    <div id="sudoku-wrapper">
+      <div class="game-wrapper">
+        <div class="difficulty">
+          <p>Difficulty</p>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="sudoku-board">
+        </div>
+      </div>
+
+      <div class="game-controls-wrapper">
+        <div class="stats">
+          <div class="mistakes">
+            <span>Mistakes: 0/3</span>
+          </div>
+          <div class="timer">Time: 00:00</div>
+        </div>
+        <div class="controls">
+          <button id="undo">Undo</button>
+          <button id="erase">Erase</button>
+          <button id="hint">Hint</button>
+        </div>
+        <div class="numpad">
+          <button class="numpad-button">1</button>
+          <button class="numpad-button">2</button>
+          <button class="numpad-button">3</button>
+          <button class="numpad-button">4</button>
+          <button class="numpad-button">5</button>
+          <button class="numpad-button">6</button>
+          <button class="numpad-button">7</button>
+          <button class="numpad-button">8</button>
+          <button class="numpad-button">9</button>
+        </div>
+        <div class="new-game">
+          <button id="new-game">New Game</button>
+        </div>
       </div>
     </div>
   </body>
-  <script>
-   
-  </script>
+  <script src="main.js"></script>
 </html>
-
-<!-- i don't know where to start with this one building the game -->
